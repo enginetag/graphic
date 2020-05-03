@@ -2,9 +2,11 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
+    sf::RenderWindow window(sf::VideoMode(400, 400), "SFML works!");
+    sf::CircleShape shape(150.f, 64);
     shape.setFillColor(sf::Color::Green);
+    shape.move(50,50);
+
 
     while (window.isOpen())
     {

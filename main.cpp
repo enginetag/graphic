@@ -5,13 +5,14 @@ int main() {
     unsigned int w = 400;
     unsigned int h = 400;
     float r_shape = 16;
-    float r = 300/2;
+    float r = 300 / 2;
     sf::RenderWindow window(sf::VideoMode(w, h), "SFML works!");
     sf::CircleShape shape(r_shape, 7);
     shape.setFillColor(sf::Color::Green);
     shape.move(w / 2 - r_shape, h / 2 - r_shape);
 
     float a = 0;
+    sf::Time dt = sf::milliseconds(80);
 
     sf::Event event;
     sf::Clock clock;
@@ -39,7 +40,7 @@ int main() {
             }
         }
 
-
+        sf::sleep(dt);
 
 
     }

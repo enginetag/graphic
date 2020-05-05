@@ -23,30 +23,22 @@ int main() {
                 window.close();
         }
 
+        if (clock.getElapsedTime().asSeconds() > 0.1f) {
+            {
+                shape.move(r * cos(a), r * sin(a));
 
-        {
-            shape.move(r * cos(a), r * sin(a));
-
-            window.clear();
-            window.draw(shape);
-            window.display();
+                window.clear();
+                window.draw(shape);
+                window.display();
 
 
-            shape.move(-r * cos(a), -r * sin(a));
+                shape.move(-r * cos(a), -r * sin(a));
 
-            a+=M_PI/16;
+                a += M_PI / 16;
+                clock.restart();
+            }
         }
 
-
-        if (clock.getElapsedTime().asSeconds() > 1.0f) {
-//            if (rectSourceSprite.left == 600)
-//                rectSourceSprite.left = 0;
-//            else
-//                rectSourceSprite.left += 300;
-//
-//            sprite.setTextureRect(rectSourceSprite);
-//            clock.restart();
-        }
 
 
 
